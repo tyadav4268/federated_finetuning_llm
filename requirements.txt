@@ -1,0 +1,12 @@
+transformers
+accelerate
+datasets==2.16.0
+bitsandbytes
+peft
+sentencepiece
+tokenizers
+tqdm
+rapidfuzz
+evaluate
+torch
+click
