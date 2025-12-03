@@ -26,11 +26,11 @@ The CLI is designed for a truly distributed setup where the server and clients c
 
 Core Principle: Flower is designed to operate on different machines. The client simply connects to the server's public IP and port.
 
-Setup Commands (assuming your script is named fed_qlora_medqa.py):
+Setup Commands:
 
 A. Start the Server (The aggregator)
 
-python fed_qlora_medqa.py --mode server --server_address 127.0.0.1:8080 --min_clients 2
+python fed_qlora_medqa.py --mode server --server_address 127.0.0.1:8080 
 
 
 B. Start the Clients (The trainers)
@@ -38,10 +38,10 @@ B. Start the Clients (The trainers)
 Run these commands on separate terminals (or separate remote machines), ensuring the --server_address matches the machine running the server.
 
 # Client 0 (CID 0)
-python fed_qlora_medqa.py --mode client --cid 0 --server_address 127.0.0.1:8080 --device cuda:0
+python fed_qlora_medqa.py --mode client --cid 0 --server_address 127.0.0.1:8080 
 
 # Client 1 (CID 1)
-python fed_qlora_medqa.py --mode client --cid 1 --server_address 127.0.0.1:8080 --device cuda:1
+python fed_qlora_medqa.py --mode client --cid 1 --server_address 127.0.0.1:8080 
 
 
 2. Streamlit UI (Single-Machine Demo)
@@ -50,10 +50,8 @@ The Streamlit UI abstracts the command-line arguments and is the primary tool fo
 
 To start the UI:
 
-streamlit run your_ui_script_name.py
-
-# streamlit run fed_qlora_medqa.py
-
+streamlit run app.py
+(Keep app.py and fed_3.py in same directory as app.py uses fed_3.py which is a slightly modified version of the fed_qlora_medqa.py file.)
 
 🎯 Purpose of the Streamlit UI
 
