@@ -51,7 +51,7 @@ The Streamlit UI abstracts the command-line arguments and is the primary tool fo
 To start the UI:
 
 streamlit run your_ui_script_name.py
-# (Assuming your Streamlit file is the same file that contains the code provided)
+
 # streamlit run fed_qlora_medqa.py
 
 
