@@ -1,0 +1,11 @@
+torch
+transformers
+peft
+flwr
+datasets
+pypdf
+streamlit
+plotly
+pandas
+numpy
+accelerate
